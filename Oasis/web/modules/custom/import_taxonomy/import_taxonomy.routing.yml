@@ -1,0 +1,7 @@
+import_taxonomy.page:
+  path: '/importTaxonomy'
+  defaults:
+    _title: 'Import Taxonomy'
+    _controller: '\Drupal\import_taxonomy\Controller\ImportTaxonomyController::import'
+  requirements:
+    _access: 'TRUE'

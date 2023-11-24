@@ -1,0 +1,11 @@
+#config_form.page:
+config_form.settings:
+  path: '/admin/getConfig'
+  defaults:
+    _form: '\Drupal\config_form\Form\ConfigForm'
+    _title: 'Formulaire de configuration'
+  options:
+    _admin_route: 'TRUE'
+  requirements:
+    _permission: 'administer site configuration'
+  #   _access: 'TRUE'

@@ -1,0 +1,10 @@
+name: Import Taxonomy
+description: Ce module permet d'importer une liste de taxonomie rapidement.
+#package: Administration
+type: module
+core_version_requirement: 10.x
+
+version: 8.x.1-0
+package: Custom
+#dependencies:  (oui si export mais pas import)
+#  - 

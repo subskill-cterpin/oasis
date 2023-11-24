@@ -1,0 +1,11 @@
+global-styling:
+  version: 1.0
+  css:
+    base:
+      assets/css/style.css: {}
+      css/styles.css: {}
+
+  js:
+    js/custom.js: {}
+  dependencies:
+    - core/jquery

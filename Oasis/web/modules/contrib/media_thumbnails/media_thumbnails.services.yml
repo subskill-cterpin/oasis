@@ -1,0 +1,10 @@
+services:
+  plugin.manager.media_thumbnail:
+    class: Drupal\media_thumbnails\Plugin\MediaThumbnailManager
+    calls:
+      - [ setContainer, [ '@service_container' ] ]
+    parent: default_plugin_manager
+    arguments: [ '@config.factory' ]
+  logger.media_thumbnails:
+    parent: logger.channel_base
+    arguments: [ 'media thumbnails' ]

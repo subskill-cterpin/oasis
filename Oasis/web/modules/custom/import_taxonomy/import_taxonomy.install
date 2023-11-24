@@ -1,0 +1,25 @@
+<?php
+
+$vid = "couleur";
+$name = "Couleur";
+
+$vocabularies = \Drupal\taxonomy\Entity\Vocabulary::loadMultiple();
+
+if (!isset($vocabularies[$vid])) {
+  $vocabulary = \Drupal\taxonomy\Entity\Vocabulary::create(array(
+        'vid' => $vid,
+        'description' => 'Voici une liste de toutes les couleurs existantes',
+        'name' => $name,
+  ))->save();
+  
+  $categories = ['Rouge', 'Vert', 'Bleu', 'Jaune'];
+  foreach ($categories as $category) {
+  $category = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->create([
+    'name' => $category,
+    'vid' => $vid,
+  ])->save();
+  }
+}
+else {
+  \Drupal::messenger()->addMessage($name . ' vocabulary already exits');
+}

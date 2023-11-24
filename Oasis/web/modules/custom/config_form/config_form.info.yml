@@ -1,0 +1,7 @@
+name: Custom Form
+description: cc
+package: Custom
+type: module
+core_version_requirement: ^10
+
+version: 8.x.1-0
